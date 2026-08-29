@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — How Many Marks Do I Need to Get an A?</title>
+  <meta name="description" content="Learn what the GradeCalculator does, who it’s for, and how it helps students figure out exactly what they need on their final exam." />
+  <link rel="canonical" href="https://gradecalculator.app/about/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#010120" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gradecalculator.app/about/" />
+  <meta property="og:title" content="About — GradeCalculator" />
+  <meta property="og:description" content="A tiny calculator that answers one question well: what do you need on the final to get an A?" />
+  <meta property="og:image" content="https://gradecalculator.app/og-image.png" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="/" class="brand" aria-label="GradeCalculator home">
+        <span class="brand__mark" aria-hidden="true">A%</span>
+        <span class="brand__text"><span class="brand__name">GradeCalculator</span><span class="brand__tagline">Marks to an A</span></span>
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="/">Calculator</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/about/" aria-current="page">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <a href="/" class="btn btn--on-dark header-cta">Open calculator</a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+        <span class="sr-only">Open menu</span>
+        <svg data-icon-open viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg data-icon-close viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="display:none"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </header>
+  <div id="mobile-nav" class="mobile-nav" data-mobile-nav>
+    <nav aria-label="Mobile">
+      <div class="mobile-nav__links">
+        <a href="/">Calculator →</a>
+        <a href="/faq/">FAQ →</a>
+        <a href="/about/" aria-current="page">About →</a>
+        <a href="/contact/">Contact →</a>
+        <a href="/privacy/">Privacy →</a>
+        <a href="/terms/">Terms →</a>
+      </div>
+      <div class="mobile-nav__footer">
+        <a href="/" class="btn btn--on-dark btn--full">Open calculator</a>
+        <p>No tracking. No sign-up. Just the maths.</p>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main">
+    <section class="page-header" aria-labelledby="page-title">
+      <div class="page-header__inner">
+        <div class="eyebrow eyebrow--on-dark">About the project</div>
+        <h1 id="page-title">A calculator that answers one question well.</h1>
+        <p>GradeCalculator exists for the moment before a final exam when you want a straight answer — not a dashboard.</p>
+      </div>
+    </section>
+
+    <div class="content content--with-toc">
+      <article class="prose">
+        <h2>What it does</h2>
+        <p>You enter three things: <strong>marks you’ve earned so far</strong>, <strong>how many marks were possible</strong>, and <strong>how many marks the final is worth</strong>. Then you pick your <strong>target overall percentage</strong> — typically the boundary for an A at your school.</p>
+        <p>The calculator tells you the <strong>minimum whole-number score</strong> you need on the final to reach that target. It assumes the current marks and the final are weighted equally by their point totals (the most common university pattern) and is transparent about that assumption.</p>
+
+        <h2>Why it exists</h2>
+        <p>Students often have to reverse-engineer a grade from a syllabus table or a spreadsheet that someone else built. That’s slow, error-prone, and stressful right before an exam.</p>
+        <p>This tool is intentionally small:</p>
+        <ul>
+          <li><strong>Fast</strong> — one form, one answer, no scrolling.</li>
+          <li><strong>Private</strong> — calculations run in your browser. Nothing is sent to a server or stored.</li>
+          <li><strong>Clear</strong> — rounding, edge cases, and assumptions are explained in plain language.</li>
+        </ul>
+
+        <h2>Who it’s for</h2>
+        <p>Any student who knows their current fraction (e.g. 72/80) and the size of the final. It’s useful for high school, college, and university courses where the final is a single exam with a known point total. If your course uses category weightings (e.g. homework 30%, midterm 30%, final 40%), this calculator isn’t the right model — check your syllabus weighting instead.</p>
+
+        <div class="info-grid info-grid--3" style="margin-top:20px;">
+          <div class="info-card">
+            <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Private by default</h3>
+            <p>No account, no cookies for tracking, no marks ever leave your device.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <h3>Instant</h3>
+            <p>Type, press Enter, see the answer. No page reloads or spinners.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+            <h3>Accurate</h3>
+            <p>Validated maths with clear rounding — 89.2 becomes 90, not 89.</p>
+          </div>
+        </div>
+
+        <h2>How the calculation works</h2>
+        <p>Overall % = (earned + finalObtained) ÷ (possible + finalTotal) × 100</p>
+        <p>We solve for <em>finalObtained</em>:</p>
+        <p><code>required = ceil(target/100 × (possible + finalTotal) − earned)</code></p>
+        <p>If the result is ≤ 0, you already have enough. If it’s &gt; finalTotal, an A isn’t mathematically possible and we show your maximum overall percentage. Otherwise we show the required marks and the percentage that represents.</p>
+        <p>See the <a href="/faq/">FAQ</a> for handling of fractional marks, weighting assumptions, and other grade boundaries.</p>
+
+        <h2>No invented story</h2>
+        <p>This is a small, independent educational tool — not a company, not a team, not a startup with a funding round. It was built to be useful, accessible, and honest about what it does and doesn’t do.</p>
+        <p>Questions or feedback? <a href="mailto:yashkharb37@gmail.com">yashkharb37@gmail.com</a></p>
+      </article>
+
+      <aside class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title" class="toc__title">On this page</h2>
+        <ul class="toc__list">
+          <li><a href="#main">What it does</a></li>
+          <li><a href="/faq/">Read the FAQ →</a></li>
+          <li><a href="/">Try the calculator →</a></li>
+        </ul>
+        <div style="margin-top:18px; padding:14px; background:var(--color-canvas-dark); border-radius:10px; color:white;">
+          <div style="font-family:var(--font-mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.6;">Try it</div>
+          <div style="font-size:14px; font-weight:600; margin-top:6px;">72 / 80 + 100 final → 90%?</div>
+          <div style="font-size:13px; opacity:0.7; margin-top:4px;">You need 90 / 100.</div>
+          <a href="/" class="btn btn--on-dark" style="margin-top:12px; width:100%;">Open calculator</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="brand"><span class="brand__mark" aria-hidden="true">A%</span><span class="brand__text"><span class="brand__name" style="color:var(--color-ink)">GradeCalculator</span><span class="brand__tagline" style="color:var(--color-body)">Marks to an A</span></span></a>
+        <p>A tiny, private calculator for students.</p>
+      </div>
+      <div class="footer-col"><h4>Product</h4><ul><li><a href="/">Calculator</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms</a></li><li><a href="mailto:yashkharb37@gmail.com">yashkharb37@gmail.com</a></li></ul></div>
+      <div class="footer-col"><h4>On this page</h4><ul><li><a href="#main">Overview</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 GradeCalculator.</span><span><a href="mailto:yashkharb37@gmail.com" style="color:inherit; text-decoration:underline;">yashkharb37@gmail.com</a></span></div>
+    <div class="footer-wordmark" aria-hidden="true">GradeCalculator</div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
