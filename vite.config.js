@@ -4,6 +4,7 @@ import { resolve } from 'path';
 const root = import.meta.dirname ?? process.cwd();
 
 export default defineConfig({
+  base: '/Grade-Calculator/',
   appType: 'mpa',
   build: {
     rollupOptions: {
