@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — GradeCalculator</title>
-  <meta name="description" content="Privacy Policy for GradeCalculator. All calculations run in your browser — no marks are sent or stored." />
+  <meta name="description" content="Privacy Policy for GradeCalculator. Learn how calculator inputs, shared links, contact messages, and Google Analytics usage data are handled." />
   <link rel="canonical" href="https://yashkharb.github.io/Grade-Calculator/privacy/" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#010120" />
@@ -22,7 +22,7 @@
     <div class="site-header__inner">
       <a href="/Grade-Calculator/" class="brand" aria-label="GradeCalculator home">
         <span class="brand__mark" aria-hidden="true">A%</span>
-        <span class="brand__text"><span class="brand__name">GradeCalculator</span><span class="brand__tagline">Marks to an A</span></span>
+        <span class="brand__text"><span class="brand__name">GradeCalculator</span><span class="brand__tagline">Know your number</span></span>
       </a>
       <nav class="nav-desktop" aria-label="Primary">
         <a href="/Grade-Calculator/">Calculator</a>
@@ -58,42 +58,46 @@
 
     <div class="content content--with-toc">
       <article class="prose">
-        <p><strong>Summary:</strong> GradeCalculator does not collect, transmit, or store the marks you enter. All calculations happen locally in your browser.</p>
+        <p><strong>Summary:</strong> The arithmetic runs locally in your browser and GradeCalculator does not maintain a calculator history. We may collect visitor usage data through Google Analytics. Shared calculation links contain the entered values in their URL, so those values may be visible to recipients and included in normal server or analytics requests when opened.</p>
 
         <h2>What we collect</h2>
-        <p><strong>Calculator inputs:</strong> The numbers you type (current marks, final total, target) are processed entirely <em>client-side</em> in JavaScript. They are never sent to our servers, never written to a database, and never shared with third parties. Closing the tab discards them.</p>
+        <p><strong>Calculator inputs:</strong> The numbers you type (current marks, final total, target) are used by client-side JavaScript to calculate your result. We do not maintain a calculation history in a GradeCalculator database. If you use <strong>Copy link</strong>, the values are encoded in the URL (e.g. <code>?earned=72&amp;possible=80&amp;final=100&amp;target=90</code>) so the recipient can restore the same calculation in <em>their</em> browser. Because the URL contains those values, anyone with the link can see them, and opening the link may make the URL available to hosting logs or Google Analytics. Do not put sensitive information in a share link.</p>
         <p><strong>Contact:</strong> If you email <a href="mailto:yashkharb37@gmail.com">yashkharb37@gmail.com</a> or use the contact form (which opens your mail app), we receive your name, email address, and message so we can reply. We don’t add you to a mailing list unless you explicitly ask.</p>
-        <p><strong>No accounts, no tracking cookies:</strong> We don’t require sign-up, we don’t set advertising or analytics cookies, and we don’t build profiles.</p>
+        <p><strong>Analytics:</strong> We may use Google Analytics to understand aggregate visitor usage. Depending on configuration, it may collect page views, interactions, device and browser information, approximate location, and cookie or similar identifiers. Analytics data is handled by Google under its own privacy terms. We do not use calculator inputs to create an account or maintain a calculation history.</p>
 
         <h2>What we don’t collect</h2>
         <ul>
-          <li>We don’t store your marks or calculation history on a server.</li>
-          <li>We don’t use fingerprinting or cross-site trackers.</li>
-          <li>We don’t sell personal data — we don’t have it to sell.</li>
+          <li>We don’t maintain your marks or calculation history in a GradeCalculator database.</li>
+          <li>We don’t require an account to use the calculator.</li>
+          <li>We don’t sell personal data.</li>
         </ul>
 
+        <h2>Share links</h2>
+        <p>The <strong>Copy link</strong> feature creates a URL that contains your inputs as query parameters. The values are visible in the URL, so anyone you share it with can read them. When someone opens the link, the URL is part of the normal request and may be available to hosting logs and Google Analytics. The calculation itself is restored locally in JavaScript; do not use a share link for sensitive information.</p>
+
         <h2>Local storage</h2>
-        <p>We don’t currently use <code>localStorage</code> or <code>sessionStorage</code> to persist your inputs. If that changes (for example, to remember your last calculation on your device), we’ll update this policy and note it in the UI.</p>
+        <p>We don’t use <code>localStorage</code> or <code>sessionStorage</code> to persist your inputs. The page does not remember form values after you close it. This does not remove values from a share URL, server log, analytics record, or message where you have already shared them.</p>
 
         <h2>Server logs</h2>
-        <p>Like most websites, our hosting provider may generate standard web-server logs (IP address, user agent, requested URL, timestamp) for security and reliability. Those logs are not linked to your calculator inputs and are retained only as long as needed for operational purposes.</p>
+        <p>Like most websites, our hosting provider may generate standard web-server logs (IP address, user agent, requested URL, timestamp) for security and reliability. A requested URL may include the calculator values from a shared link. Logs are retained by the hosting provider according to its policies and operational needs.</p>
 
         <h2>Third-party services</h2>
-        <p>This site loads fonts from Google Fonts (<code>fonts.googleapis.com</code> / <code>fonts.gstatic.com</code>) to render Inter and JetBrains Mono. When your browser fetches those fonts, Google may receive your IP address and user agent as part of a normal web request. No calculator data is sent to Google.</p>
-        <p>We don’t embed analytics, ads, or social widgets that would otherwise track you across sites.</p>
+        <p>This site loads fonts from Google Fonts (<code>fonts.googleapis.com</code> / <code>fonts.gstatic.com</code>) to render Inter and JetBrains Mono. When your browser fetches those fonts, Google may receive your IP address and user agent as part of a normal web request.</p>
+        <p>We may also use Google Analytics for visitor measurement. It can collect usage information such as page views, events or interactions, device/browser details, approximate location, and cookie or similar identifiers. If a shared calculation URL is opened, its query-string values may be included in the page URL available to analytics. Review Google’s policies for how Google handles analytics data.</p>
 
         <h2>Children’s privacy</h2>
         <p>The calculator is useful for students of any age, but it is not directed at children under 13 and we don’t knowingly collect personal information from children.</p>
 
         <h2>Your choices</h2>
         <ul>
-          <li>You can use the calculator without providing any personal information.</li>
+          <li>You can use the calculator without creating an account or providing contact information.</li>
           <li>You can block fonts or JavaScript in your browser — the page will still convey information, though the calculator requires JavaScript to compute.</li>
+          <li>You can manage cookies and analytics permissions through your browser settings and, where available, the site’s consent controls. Google also provides an <a href="https://tools.google.com/dlpage/gaoptout">Analytics opt-out browser add-on</a>.</li>
           <li>You can request deletion of any email correspondence by writing to <a href="mailto:yashkharb37@gmail.com">yashkharb37@gmail.com</a>.</li>
         </ul>
 
         <h2>Changes to this policy</h2>
-        <p>If we add features that change how data is handled (for example, analytics or persistent storage), we’ll update this page and change the “Last updated” date. Material changes will be noted clearly on the site.</p>
+        <p>If we change how data is handled, including the analytics provider, analytics settings, or persistent storage, we’ll update this page and change the “Last updated” date. Material changes will be noted clearly on the site.</p>
 
         <h2>Contact</h2>
         <p>Questions about privacy? Email <a href="mailto:yashkharb37@gmail.com">yashkharb37@gmail.com</a>.</p>
@@ -111,7 +115,7 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand"><a href="/Grade-Calculator/" class="brand"><span class="brand__mark" aria-hidden="true">A%</span><span class="brand__text"><span class="brand__name" style="color:var(--color-ink)">GradeCalculator</span><span class="brand__tagline" style="color:var(--color-body)">Marks to an A</span></span></a><p>A tiny, private calculator for students.</p></div>
+      <div class="footer-brand"><a href="/Grade-Calculator/" class="brand"><span class="brand__mark" aria-hidden="true">A%</span><span class="brand__text"><span class="brand__name" style="color:var(--color-ink)">GradeCalculator</span><span class="brand__tagline" style="color:var(--color-body)">Know your number</span></span></a><p>A tiny, focused calculator for students.</p></div>
       <div class="footer-col"><h4>Product</h4><ul><li><a href="/Grade-Calculator/">Calculator</a></li><li><a href="/Grade-Calculator/faq/">FAQ</a></li><li><a href="/Grade-Calculator/about/">About</a></li><li><a href="/Grade-Calculator/contact/">Contact</a></li></ul></div>
       <div class="footer-col"><h4>Legal</h4><ul><li><a href="/Grade-Calculator/privacy/">Privacy</a></li><li><a href="/Grade-Calculator/terms/">Terms</a></li><li><a href="mailto:yashkharb37@gmail.com">yashkharb37@gmail.com</a></li></ul></div>
       <div class="footer-col"><h4>Need help?</h4><ul><li><a href="/Grade-Calculator/faq/">FAQ</a></li></ul></div>

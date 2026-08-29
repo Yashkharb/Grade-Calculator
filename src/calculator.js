@@ -5,18 +5,19 @@
  * overall% = (obtained + finalObtained) / (possible + finalTotal) * 100
  * Solve for finalObtained:
  * required = ceil(target/100 * (possible + finalTotal) - obtained)
+ *
+ * Pure, deterministic, DOM-free. All UI logic lives in main.js.
  */
+
+const EPS = 1e-9;
 
 export function calculateRequired({ obtained, possible, finalTotal, target }) {
   const raw = (target / 100) * (possible + finalTotal) - obtained;
-  const required = Math.ceil(raw - 1e-9); // tiny epsilon to avoid 89.00000001 -> 90
-  // If raw is integer within floating tolerance, ceil should stay
-  // The epsilon above prevents unnecessary ceil bump when raw is e.g. 90.0000000001
-  // But we still want true fractional 89.2 -> 90. So subtract epsilon before ceil.
+  const required = Math.ceil(raw - EPS);
   const maxPossible = obtained + finalTotal;
   const maxTotal = possible + finalTotal;
-  const maxPercentage = (maxPossible / maxTotal) * 100;
-  const minPercentage = (obtained / maxTotal) * 100;
+  const maxPercentage = maxTotal > 0 ? (maxPossible / maxTotal) * 100 : 0;
+  const minPercentage = maxTotal > 0 ? (obtained / maxTotal) * 100 : 0;
   const requiredPercentage = finalTotal > 0 ? (required / finalTotal) * 100 : 0;
 
   let status;
@@ -24,18 +25,83 @@ export function calculateRequired({ obtained, possible, finalTotal, target }) {
   else if (required > finalTotal) status = 'impossible';
   else status = 'achievable';
 
+  const clamped = Math.min(Math.max(0, required), finalTotal);
+  const exactInt = Math.abs(raw - Math.round(raw)) < EPS;
+
   return {
-    raw, // float before ceil
-    required: Math.max(0, required), // clamped 0..finalTotal for display, but keep status logic above
-    requiredClamped: Math.min(Math.max(0, required), finalTotal),
+    raw,
+    required: Math.max(0, required),
+    requiredClamped: clamped,
     requiredPercentage: Math.max(0, requiredPercentage),
     maxPercentage,
     minPercentage,
     maxPossible,
     maxTotal,
     status,
-    needsRounding: raw !== Math.ceil(raw - 1e-9) && status === 'achievable',
+    needsRounding: !exactInt && status === 'achievable',
+    exactRaw: Math.abs(raw - Math.round(raw)) < EPS ? Math.round(raw) : raw,
   };
+}
+
+/** Overall % if you score `score` on the final */
+export function overallForScore({ obtained, possible, finalTotal }, score) {
+  const total = possible + finalTotal;
+  if (total === 0) return 0;
+  return ((obtained + score) / total) * 100;
+}
+
+/** Current standing % (so far) */
+export function currentPercentage({ obtained, possible }) {
+  if (possible === 0) return 0;
+  return (obtained / possible) * 100;
+}
+
+/** Buffer / margin if you ace the final */
+export function bufferForAchievable({ finalTotal }, required) {
+  return Math.max(0, finalTotal - required);
+}
+
+/** Gap when impossible */
+export function impossibleGap({ maxPercentage, target }) {
+  return Math.max(0, target - maxPercentage);
+}
+
+/** Generate scenario rows for What-if slider (for display only) */
+export function whatIfScenarios(inputs, steps = [60, 70, 80, 90, 100]) {
+  return steps.map((pct) => {
+    const score = Math.round((pct / 100) * inputs.finalTotal);
+    return {
+      score,
+      pctOfFinal: pct,
+      overall: overallForScore(inputs, score),
+    };
+  });
+}
+
+/** Target explorer: for each target, what final is needed */
+export function exploreTargets(inputs, targets = [60, 70, 80, 85, 90, 95, 100]) {
+  return targets.map((t) => {
+    const r = calculateRequired({ ...inputs, target: t });
+    return {
+      target: t,
+      required: r.required,
+      raw: r.raw,
+      status: r.status,
+      maxPercentage: r.maxPercentage,
+    };
+  });
+}
+
+/** Insight string: how required compares to current avg */
+export function insight({ obtained, possible, finalTotal, target }, result) {
+  if (result.status === 'impossible') return `Maximum overall is ${formatNumber(result.maxPercentage, 1)}% even with a perfect final.`;
+  if (result.status === 'already') return `You already average ${formatNumber(currentPercentage({ obtained, possible }), 1)}% — no marks needed on the final.`;
+  const cur = currentPercentage({ obtained, possible });
+  const need = result.requiredPercentage;
+  const diff = need - cur;
+  if (Math.abs(diff) < 0.05) return `You need ${formatNumber(need, 1)}% on the final — exactly your current average.`;
+  if (diff > 0) return `You need ${formatNumber(need, 1)}% on the final, ${formatNumber(Math.abs(diff), 1)} points above your current ${formatNumber(cur, 1)}% average.`;
+  return `You need ${formatNumber(need, 1)}% on the final, ${formatNumber(Math.abs(diff), 1)} points below your current ${formatNumber(cur, 1)}% average.`;
 }
 
 export function validateInputs({ obtained, possible, finalTotal, target }) {

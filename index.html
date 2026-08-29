@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How Many Marks Do I Need to Get an A? — Final Exam Calculator</title>
-  <meta name="description" content="Instantly calculate how many marks you need on your final exam to get an A. Enter your current marks, final total, and target percentage — get the exact required score." />
+  <meta name="description" content="Know your number before the final. Enter your current marks, final total, and target — see exactly how many marks you need on the final, with what-if scenarios. Instant, clear, no sign-up." />
   <link rel="canonical" href="https://yashkharb.github.io/Grade-Calculator/" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#010120" />
@@ -17,14 +17,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yashkharb.github.io/Grade-Calculator/" />
   <meta property="og:title" content="How Many Marks Do I Need to Get an A? — Final Exam Calculator" />
-  <meta property="og:description" content="Enter your current marks, final exam total, and target percentage. We’ll tell you exactly how many marks you need on the final." />
+  <meta property="og:description" content="Know your number. Enter your current marks, final exam total, and target percentage — get the exact required score, what-if scenarios, and every achievable target." />
   <meta property="og:image" content="https://yashkharb.github.io/Grade-Calculator/og-image.png" />
   <meta property="og:site_name" content="GradeCalculator" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="How Many Marks Do I Need to Get an A?" />
-  <meta name="twitter:description" content="The fastest way to calculate the marks you need on your final exam." />
+  <meta name="twitter:description" content="The fastest way to calculate the marks you need on your final exam. Know your number in under 5 seconds." />
   <meta name="twitter:image" content="https://yashkharb.github.io/Grade-Calculator/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,7 +36,7 @@
     "@type": "WebApplication",
     "name": "How Many Marks Do I Need to Get an A?",
     "url": "https://yashkharb.github.io/Grade-Calculator/",
-    "description": "Calculate exactly how many marks you need on your final exam to reach your target overall percentage.",
+    "description": "Calculate exactly how many marks you need on your final exam to reach your target overall percentage. Know your number before you walk in.",
     "applicationCategory": "EducationalApplication",
     "operatingSystem": "Any",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
@@ -67,7 +67,7 @@
         <span class="brand__mark" aria-hidden="true">A%</span>
         <span class="brand__text">
           <span class="brand__name">GradeCalculator</span>
-          <span class="brand__tagline">Marks to an A</span>
+          <span class="brand__tagline">Know your number</span>
         </span>
       </a>
 
@@ -100,26 +100,27 @@
       </div>
       <div class="mobile-nav__footer">
         <a href="#calculator" class="btn btn--on-dark btn--full">Calculate required marks</a>
-        <p>Free, private, no sign-up. Calculations happen in your browser.</p>
+        <p>Free, no sign-up. Calculations run in your browser; site usage may be measured through Google Analytics.</p>
       </div>
     </nav>
   </div>
 
   <main id="main">
-    <!-- Hero -->
+    <!-- Hero: calculator is the hero -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__inner">
         <div>
-          <span class="hero__eyebrow"><span class="hero__eyebrow-dot" aria-hidden="true"></span> Free · Private · Instant</span>
+          <p class="hero-kicker">Know your number — before you walk in</p>
+          <span class="hero__eyebrow"><span class="hero__eyebrow-dot" aria-hidden="true"></span> Free · Clear · Instant</span>
           <h1 id="hero-title" class="hero__title">How many marks do you need to <span class="hero__title-gradient">get an A?</span></h1>
-          <p class="hero__lead">Enter your current marks, your final exam total, and the percentage you’re aiming for. We’ll tell you the exact marks you need — rounded up to the nearest whole mark.</p>
+          <p class="hero__lead">Enter your current marks, your final exam total, and the percentage you’re aiming for. We’ll tell you the exact marks you need — rounded up to the nearest whole mark. No guessing. Just the maths.</p>
           <div class="hero__actions">
             <a href="#calculator" class="btn btn--on-dark btn--large">Calculate required marks</a>
             <a href="#how-it-works" class="btn btn--ghost-dark btn--large">How it works</a>
           </div>
           <div class="hero__meta" aria-label="Highlights">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg> No sign-up</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Nothing stored</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> No account needed</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Under 5 seconds</span>
           </div>
         </div>
@@ -148,6 +149,7 @@
               <div class="mini-stat__sub">rounded up</div>
             </div>
           </div>
+          <p style="font-size:11px; color:var(--color-on-dark-muted); margin:12px 0 0; line-height:1.4; text-align:center; font-family:var(--font-mono);">Where am I → What do I need → What’s possible</p>
         </div>
       </div>
     </section>
@@ -160,13 +162,13 @@
           <div class="calc-card__header">
             <div class="eyebrow">Calculator</div>
             <h2 id="calc-title" class="calc-card__title">What do you need on the final?</h2>
-            <p class="calc-card__subtitle">We combine your current marks with the final and check what hits your target.</p>
+            <p class="calc-card__subtitle">Three numbers. One answer. <strong style="color:var(--color-ink)">Know your number.</strong></p>
           </div>
 
           <form class="calc-form" data-calc-form novalidate>
             <div id="calc-general-error" role="alert" hidden style="font-size:13px; color:var(--color-error); background:var(--color-error-bg); border:1px solid #fecaca; padding:10px 12px; border-radius:8px;"></div>
 
-            <!-- Current marks group -->
+            <!-- Current marks - unified -->
             <fieldset class="field-group" style="border:none; padding:0; margin:0;">
               <legend class="sr-only">Current marks</legend>
               <div class="field-group__head">
@@ -174,24 +176,30 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
                 </span>
                 <span class="field-group__label">Your current marks</span>
-                <span class="field-group__hint">Out of total possible</span>
+                <span class="field-group__hint">earned / possible</span>
               </div>
-              <div class="field-row">
+              <div class="unified-row">
                 <div class="field">
                   <label class="field__label" for="obtained">Marks you’ve earned</label>
                   <div class="input-wrap">
-                    <input class="input" id="obtained" name="obtained" type="number" inputmode="decimal" min="0" step="0.5" placeholder="72" autocomplete="off" required aria-describedby="obtained-hint obtained-error" />
+                    <input class="input input--lg" id="obtained" name="obtained" type="number" inputmode="decimal" min="0" step="0.5" placeholder="72" autocomplete="off" required aria-describedby="obtained-hint obtained-error" />
                   </div>
-                  <span id="obtained-hint" class="field__hint">e.g. 72</span>
+                  <span id="obtained-hint" class="field__hint" style="font-size:11px;">e.g. 72</span>
                   <span id="obtained-error" class="field__error" role="alert"></span>
                 </div>
+                <div class="unified-sep" aria-hidden="true">/</div>
                 <div class="field">
-                  <label class="field__label" for="possible">Current marks possible</label>
+                  <label class="field__label" for="possible">Out of — Total possible so far</label>
                   <div class="input-wrap">
-                    <input class="input" id="possible" name="possible" type="number" inputmode="decimal" min="0" step="0.5" placeholder="80" autocomplete="off" required aria-describedby="possible-error" />
+                    <input class="input input--lg" id="possible" name="possible" type="number" inputmode="decimal" min="0" step="0.5" placeholder="80" autocomplete="off" required aria-describedby="possible-error" />
                   </div>
+                  <span class="field__hint" style="font-size:11px;">e.g. 80</span>
                   <span id="possible-error" class="field__error" role="alert"></span>
                 </div>
+              </div>
+              <!-- Live position signal -->
+              <div id="live-signal" class="live-signal" hidden aria-live="polite">
+                <!-- injected by JS -->
               </div>
             </fieldset>
 
@@ -202,12 +210,14 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
                 </span>
                 <span class="field-group__label">Final exam</span>
+                <span class="field-group__hint">remaining assessment</span>
               </div>
               <div class="field">
-                <label class="field__label" for="finalTotal">Final exam total marks</label>
+                <label class="field__label" for="finalTotal">Final exam — out of</label>
                 <div class="input-wrap">
                   <input class="input input--lg" id="finalTotal" name="finalTotal" type="number" inputmode="decimal" min="0" step="1" placeholder="100" autocomplete="off" required aria-describedby="finalTotal-error" />
                 </div>
+                <span class="field__hint" style="font-size:11px;">e.g. 100 — enter whatever your final is worth</span>
                 <span id="finalTotal-error" class="field__error" role="alert"></span>
               </div>
             </div>
@@ -224,11 +234,12 @@
 
               <div class="target-row">
                 <div class="field">
-                  <label class="field__label" for="target">A requires — target overall (%)</label>
+                  <label class="field__label" for="target">I want to finish with</label>
                   <div class="input-wrap">
                     <input class="input input--lg input--with-suffix" id="target" name="target" type="number" inputmode="decimal" min="1" max="100" step="0.5" placeholder="90" value="90" required aria-describedby="target-error" />
                     <span class="input-suffix" aria-hidden="true">%</span>
                   </div>
+                  <span class="field__hint" style="font-size:11px;">overall — e.g. 90 for an A</span>
                   <span id="target-error" class="field__error" role="alert"></span>
                 </div>
                 <label class="sr-only" for="targetRange">Adjust target with slider</label>
@@ -254,8 +265,13 @@
 
             <p class="field__hint" style="text-align:center; margin:0;">
               Press <kbd style="font-family:var(--font-mono); font-size:11px; background:var(--color-canvas-soft); border:1px solid var(--color-hairline); padding:1px 6px; border-radius:4px;">Enter</kbd> to calculate ·
-              <button type="button" data-fill-example style="background:none; border:none; padding:0; font:inherit; color:var(--color-ink); text-decoration:underline; text-underline-offset:3px; cursor:pointer;">Fill example (72/80 → 90%)</button>
+              <button type="button" data-fill-example style="background:none; border:none; padding:0; font:inherit; color:var(--color-ink); text-decoration:underline; text-underline-offset:3px; cursor:pointer;">Try example 72/80 → 90%</button>
             </p>
+
+            <div class="weighting-notice" role="note" aria-label="Weighting assumption">
+              <span class="weighting-notice__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 8v5"/><circle cx="12" cy="16" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="9"/></svg></span>
+              <div><strong>Important:</strong> This assumes your current marks + final are combined by <em>total points</em> (e.g. 80 + 100 = 180). If your syllabus says “the final is worth 40% of your grade”, use a weighted calculator — this model will be off. <a href="/Grade-Calculator/faq/">Learn why</a></div>
+            </div>
           </form>
         </div>
 
@@ -268,9 +284,9 @@
             </div>
           </div>
 
-          <div style="margin-top:14px; display:flex; gap:8px; align-items:center; justify-content:center; font-size:12px; color:var(--color-body);">
+          <div style="margin-top:14px; display:flex; gap:8px; align-items:center; justify-content:center; font-size:12px; color:var(--color-body); flex-wrap:wrap; text-align:center;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Private — everything runs in your browser. No data is sent or stored.
+            <span><strong style="color:var(--color-ink)">The arithmetic runs in your browser.</strong> No account required. Site usage may be measured through Google Analytics.</span>
             <a href="/Grade-Calculator/privacy/" style="color:var(--color-ink); text-decoration:underline; text-underline-offset:2px;">Privacy</a>
           </div>
         </div>
@@ -316,15 +332,124 @@
             required = <strong>ceil</strong>( <strong>target ÷ 100</strong> × (possible + final) − obtained )
           </div>
           <p class="formula-card__explain">Example: 72/80 with a 100-mark final, aiming for 90%.<br> 0.90 × 180 − 72 = 90 → you need <strong>90 / 100</strong>.</p>
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-top:14px; font-size:12px; line-height:1.4;">
+            <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px; text-align:center;">
+              <div style="font-family:var(--font-mono); font-size:10px; text-transform:uppercase; letter-spacing:0.06em; opacity:0.6;">Current</div>
+              <div style="font-weight:600; margin-top:4px;">72 / 80</div>
+              <div style="opacity:0.6; font-size:11px;">+ 90 / 100 final</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px; text-align:center;">
+              <div style="font-family:var(--font-mono); font-size:10px; text-transform:uppercase; letter-spacing:0.06em; opacity:0.6;">Total</div>
+              <div style="font-weight:600; margin-top:4px;">162 / 180</div>
+              <div style="opacity:0.6; font-size:11px;">= 90% overall ✓</div>
+            </div>
+          </div>
           <details>
             <summary>Show all edge cases we handle</summary>
             <div style="font-size:13px; color: var(--color-on-dark-muted); line-height:1.6; margin-top:10px;">
               <p style="margin:0;"><strong style="color:white;">Already enough:</strong> if you’d hit the target even with 0, we tell you so and show 0 / total.</p>
               <p style="margin:8px 0 0;"><strong style="color:white;">Impossible:</strong> if even a perfect final can’t reach the target, we show your maximum possible overall.</p>
-              <p style="margin:8px 0 0;"><strong style="color:white;">Fractional:</strong> 89.2 → 90, because you need the smallest whole mark that meets the target.</p>
+              <p style="margin:8px 0 0;"><strong style="color:white;">Fractional:</strong> 89.2 → 90, because you need the smallest whole mark that meets the target. Exact 90 stays 90.</p>
+              <p style="margin:8px 0 0;"><strong style="color:white;">Weighted finals:</strong> If your syllabus weights the final as “40% of grade” rather than points, this model isn’t exact — we flag it.</p>
             </div>
           </details>
         </div>
+      </div>
+    </section>
+
+    <!-- Built for questions like -->
+    <section class="edu-section" aria-labelledby="questions-title">
+      <div style="border-top:1px solid var(--color-hairline); padding-top:28px;">
+        <div class="eyebrow">Built for real questions</div>
+        <h2 id="questions-title" style="font-size:22px; font-weight:600; letter-spacing:-0.02em; margin:8px 0 0; line-height:1.2;">Built for questions like…</h2>
+        <p style="font-size:14px; color:var(--color-body); margin:6px 0 0; max-width:560px; line-height:1.6;">No dashboards. No sign-ups. Just the exact number you need — and what it means.</p>
+        <div class="questions-grid" style="margin-top:16px;">
+          <div class="question-quote">“I have <strong>72/80</strong>. My final is worth <strong>100</strong>. What do I need for an <strong>A</strong>?” <br><span style="font-style:normal; color:var(--color-success); font-weight:600;">→ You need 90 / 100.</span></div>
+          <div class="question-quote">“What happens if I get <strong>85</strong> on the final?” <br><span style="font-style:normal; color:var(--color-body);">→ Drag the What-if slider — see 87.8% overall instantly.</span></div>
+          <div class="question-quote">“Is my <strong>90%</strong> target still possible?” <br><span style="font-style:normal; color:var(--color-body);">→ If not, we show your max (e.g. 86.1%) and every achievable target.</span></div>
+          <div class="question-quote">“What’s the <strong>minimum</strong> I can get away with?” <br><span style="font-style:normal; color:var(--color-body);">→ Minimum whole-mark score, plus your 10-mark buffer if you ace it.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ teaser + Educational -->
+    <section class="edu-section" aria-labelledby="edu-title">
+      <div style="border-top:1px solid var(--color-hairline); padding-top:28px; margin-top:28px;">
+        <h2 id="edu-title" style="font-size:18px; font-weight:600; letter-spacing:-0.02em; margin:0;">How to get the most from the calculator</h2>
+        <div class="edu-section__grid" style="margin-top:16px;">
+          <div style="display:grid; gap:12px;">
+            <div class="edu-card">
+              <h3>What numbers do I enter?</h3>
+              <p><strong>Marks you’ve earned</strong> — everything so far (e.g. 72). <strong>Possible so far</strong> — what those were out of (e.g. 80). <strong>Final total</strong> — what the final is out of (e.g. 100). <strong>Target</strong> — the overall % you want (e.g. 90).</p>
+              <p style="margin-top:8px;">Same units throughout — if your course is out of 500, enter 360/400 etc.</p>
+            </div>
+            <div class="edu-card">
+              <h3>Why does it round up?</h3>
+              <p>You can’t earn 89.2 on most exams. If the maths says 89.2, 89 won’t get you there — you need <strong>90</strong>. If it’s exactly 90, it stays 90. We use a tiny epsilon (1e-9) so 90.0000000001 doesn’t become 91 by mistake.</p>
+            </div>
+            <div class="edu-card">
+              <h3>What if my target is impossible?</h3>
+              <p>We don’t leave you at “Sorry”. We show your <strong>maximum possible overall</strong> (with a perfect final), your <strong>gap</strong> in percentage points, and clickable lower targets that <em>are</em> achievable.</p>
+            </div>
+          </div>
+          <div style="display:grid; gap:12px; align-content:start;">
+            <div class="edu-card" style="background:var(--color-canvas-dark); color:white; border-color: rgba(255,255,255,0.08);">
+              <h3 style="color:white;">Does this work for a 40%-weighted final?</h3>
+              <p style="color:var(--color-on-dark-muted);">No — not exactly. <strong style="color:white;">This calculator uses total points.</strong> If your syllabus says “final = 40% of grade regardless of points”, the maths differs. We flag this next to the calculator and explain it in the <a href="/Grade-Calculator/faq/" style="color:var(--color-accent-mint);">FAQ</a>.</p>
+              <p style="color:var(--color-on-dark-muted); margin-top:8px;"><strong style="color:white;">Quick check:</strong> If (current possible + final total) equals your course total, you’re fine. If not, ask your instructor or use a weighted calculator.</p>
+            </div>
+            <div class="edu-card">
+              <h3>More questions?</h3>
+              <p>We answer weighting, decimals, grade boundaries, privacy, and more.</p>
+              <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
+                <a href="/Grade-Calculator/faq/" class="btn btn--primary" style="flex:1;">Browse FAQ</a>
+                <a href="/Grade-Calculator/about/" class="btn btn--outline" style="flex:1;">About the tool</a>
+              </div>
+            </div>
+            <div class="edu-card" style="background:var(--color-canvas-soft);">
+              <h3>Privacy — a product advantage</h3>
+              <p><strong>The arithmetic runs in your browser.</strong> No account is required. We may collect visitor usage data through Google Analytics. Closing the tab clears the form, while a copied share link contains its values in the URL and can be seen by anyone you share it with.</p>
+              <p style="margin-top:6px;"><a href="/Grade-Calculator/privacy/" style="color:var(--color-ink); font-weight:600; text-decoration:underline; text-underline-offset:3px;">Privacy policy →</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- More tools -->
+    <section class="more-tools" aria-labelledby="tools-title">
+      <div style="border-top:1px solid var(--color-hairline); padding-top:28px; margin-top:28px;">
+        <div class="more-tools__head">
+          <h2 id="tools-title" class="more-tools__title">More tools</h2>
+          <span class="more-tools__hint">Focused calculators — same clear maths, same speed</span>
+        </div>
+        <div class="tools-grid">
+          <a href="#calculator" class="tool-card tool-card--active" aria-current="page">
+            <span class="tool-card__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></span>
+            <span class="tool-card__badge">Current</span>
+            <span class="tool-card__name">Final Grade Calculator</span>
+            <span class="tool-card__desc">How many marks you need on the final to reach your target overall — by total points.</span>
+          </a>
+          <div class="tool-card" style="opacity:0.9;">
+            <span class="tool-card__icon tool-card__icon--muted" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h6M9 17h6"/></svg></span>
+            <span class="tool-card__badge tool-card__badge--soon">Soon</span>
+            <span class="tool-card__name">Weighted Grade Calculator</span>
+            <span class="tool-card__desc">For “final is 40% of grade” courses. Proper category weighting, same clarity.</span>
+          </div>
+          <div class="tool-card" style="opacity:0.9;">
+            <span class="tool-card__icon tool-card__icon--muted" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg></span>
+            <span class="tool-card__badge tool-card__badge--soon">Soon</span>
+            <span class="tool-card__name">Current Grade Calculator</span>
+            <span class="tool-card__desc">What’s your standing right now? 72/80 = 90% so far — plus what’s left.</span>
+          </div>
+          <div class="tool-card" style="opacity:0.9;">
+            <span class="tool-card__icon tool-card__icon--muted" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h18"/><path d="M12 3v18"/></svg></span>
+            <span class="tool-card__badge tool-card__badge--soon">Soon</span>
+            <span class="tool-card__name">GPA & Percentage Tools</span>
+            <span class="tool-card__desc">Convert, plan, and audit — without another SaaS dashboard.</span>
+          </div>
+        </div>
+        <p style="font-size:12px; color:var(--color-body); margin:12px 0 0; line-height:1.5;">We’re building these as distinct tools, not duplicate SEO pages. Each will solve a different student problem. Have a request? <a href="/Grade-Calculator/contact/" style="color:var(--color-ink); font-weight:600; text-decoration:underline; text-underline-offset:2px;">Tell us</a>.</p>
       </div>
     </section>
   </main>
@@ -334,9 +459,9 @@
       <div class="footer-brand">
         <a href="/Grade-Calculator/" class="brand" aria-label="GradeCalculator home">
           <span class="brand__mark" aria-hidden="true">A%</span>
-          <span class="brand__text"><span class="brand__name" style="color:var(--color-ink)">GradeCalculator</span><span class="brand__tagline" style="color:var(--color-body)">Marks to an A</span></span>
+          <span class="brand__text"><span class="brand__name" style="color:var(--color-ink)">GradeCalculator</span><span class="brand__tagline" style="color:var(--color-body)">Know your number</span></span>
         </a>
-        <p>A tiny, private calculator for students who just want to know — “what do I need on the final?” No accounts, no tracking, no clutter.</p>
+        <p>A tiny, focused calculator for students who just want to know — “what do I need on the final?” No account required, no clutter. See our Privacy Policy for how visitor data and calculator inputs are handled.</p>
       </div>
       <div class="footer-col">
         <h4>Product</h4>
@@ -365,7 +490,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 GradeCalculator. Built for students. No data collected.</span>
+      <span>© 2026 GradeCalculator. Built for students. Usage analytics may be collected.</span>
       <span><a href="mailto:yashkharb37@gmail.com" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">yashkharb37@gmail.com</a></span>
     </div>
     <div class="footer-wordmark" aria-hidden="true">GradeCalculator</div>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQ — How Many Marks Do I Need to Get an A?</title>
-  <meta name="description" content="Answers to common questions: how the final exam calculator works, rounding, impossible targets, weighting, and privacy." />
+  <meta name="description" content="Answers organized by student questions: using the calculator, the maths, edge cases, weighting, and privacy. How we round, what impossible means, and more." />
   <link rel="canonical" href="https://yashkharb.github.io/Grade-Calculator/faq/" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#010120" />
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yashkharb.github.io/Grade-Calculator/faq/" />
   <meta property="og:title" content="FAQ — GradeCalculator" />
-  <meta property="og:description" content="How the calculator works, what ‘minimum marks required’ means, and what happens if an A is impossible." />
+  <meta property="og:description" content="How the calculator works, what ‘minimum marks required’ means, weighting limits, and what happens if an A is impossible." />
   <meta property="og:image" content="https://yashkharb.github.io/Grade-Calculator/og-image.png" />
 
   <script type="application/ld+json">
@@ -22,46 +22,17 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How is the required final-exam score calculated?",
-        "acceptedAnswer": {"@type": "Answer", "text": "The calculator uses required = ceil(target/100 × (possible + finalTotal) − earned). It finds the smallest whole-number score on the final that pushes your combined total to your target percentage, assuming current and final marks are weighted equally by point totals."}
-      },
-      {
-        "@type": "Question",
-        "name": "What does 'minimum marks required' mean?",
-        "acceptedAnswer": {"@type": "Answer", "text": "It’s the lowest whole-number score on the final that still gets you to your target overall. If the maths says 89.2, the minimum that works is 90."}
-      },
-      {
-        "@type": "Question",
-        "name": "What happens if I already have enough marks for an A?",
-        "acceptedAnswer": {"@type": "Answer", "text": "The calculator shows 0 marks required and tells you your current overall with 0 on the final, so you can see your buffer."}
-      },
-      {
-        "@type": "Question",
-        "name": "What if an A is mathematically impossible?",
-        "acceptedAnswer": {"@type": "Answer", "text": "If even a perfect final can’t reach your target, the calculator says so and shows your maximum possible overall percentage with a perfect final."}
-      },
-      {
-        "@type": "Question",
-        "name": "Why does the calculator round up?",
-        "acceptedAnswer": {"@type": "Answer", "text": "You can’t earn a fraction of a mark on most exams. Rounding up gives the smallest integer that actually meets your target. If the exact value is 90, it stays 90; if it’s 89.1, you need 90."}
-      },
-      {
-        "@type": "Question",
-        "name": "Does the calculator assume the current and final marks are weighted equally?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Yes — by total points. If your syllabus weights categories differently (e.g. final worth 40% of the grade), this model isn’t exact. Use a weighted-grade calculator for that case."}
-      },
-      {
-        "@type": "Question",
-        "name": "Can I use this calculator for grades other than A?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Change the target percentage to any value — 60%, 70%, 80% — and the maths is identical."}
-      },
-      {
-        "@type": "Question",
-        "name": "Are my marks stored?",
-        "acceptedAnswer": {"@type": "Answer", "text": "No. Everything runs in your browser. Marks are never sent to a server or stored. See the Privacy Policy for details."}
-      }
+      { "@type": "Question", "name": "What numbers do I enter?", "acceptedAnswer": {"@type": "Answer", "text": "Enter marks you've earned so far, how many marks were possible for that work, how many marks the final is worth, and your target overall percentage. Example: 72 earned / 80 possible, final 100, target 90%." }},
+      { "@type": "Question", "name": "What does 'current marks possible' mean?", "acceptedAnswer": {"@type": "Answer", "text": "It's the total your current marks are out of — e.g. if you earned 72 on work worth 80, you enter 72 and 80. It's not a percentage, it's the point total." }},
+      { "@type": "Question", "name": "Can I use decimals?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. 72.5 / 80 is supported. The required final is still rounded up to the nearest whole mark." }},
+      { "@type": "Question", "name": "How is the required final-exam score calculated?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator uses required = ceil(target/100 × (possible + finalTotal) − earned). It finds the smallest whole-number score on the final that pushes your combined total to your target percentage, assuming current and final marks are weighted equally by point totals."}},
+      { "@type": "Question", "name": "What does 'minimum marks required' mean?", "acceptedAnswer": {"@type": "Answer", "text": "It’s the lowest whole-number score on the final that still gets you to your target overall. If the maths says 89.2, the minimum that works is 90. We show both exact and minimum so you can verify."}},
+      { "@type": "Question", "name": "Why does the calculator round up?", "acceptedAnswer": {"@type": "Answer", "text": "You can’t earn a fraction of a mark on most exams. Rounding up gives the smallest integer that actually meets your target. If the exact value is 90, it stays 90; if it’s 89.1, you need 90. A tiny epsilon prevents 90.0000000001 from becoming 91."}},
+      { "@type": "Question", "name": "What happens if I already have enough marks for an A?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator shows 0 marks required and tells you your current overall with 0 on the final, plus your buffer to a perfect final. You also get a what-if slider to explore."}},
+      { "@type": "Question", "name": "What if an A is mathematically impossible?", "acceptedAnswer": {"@type": "Answer", "text": "If even a perfect final can’t reach your target, the calculator says so, shows your maximum possible overall with a perfect final, the gap in percentage points, and clickable lower targets that are still achievable."}},
+      { "@type": "Question", "name": "What if I score 100% on the final?", "acceptedAnswer": {"@type": "Answer", "text": "We show maximum possible overall = (earned + finalTotal) / (possible + finalTotal) × 100. For 72/80 + 100/100, that's 95.6%. The result also tells you your buffer above the minimum."}},
+      { "@type": "Question", "name": "Does the calculator assume the current and final marks are weighted equally?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — by total points. If your syllabus weights categories differently (e.g. final worth 40% of the grade regardless of points), this model isn’t exact. Use a weighted-grade calculator for that case."}},
+      { "@type": "Question", "name": "Are my marks stored?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator does not keep a calculation history in your browser or in a GradeCalculator database. The arithmetic runs locally. A shared link contains its input values in the URL, and visitor usage may be measured through Google Analytics, so do not share sensitive information in a link."}}
     ]
   }
   </script>
@@ -73,7 +44,7 @@
     <div class="site-header__inner">
       <a href="/Grade-Calculator/" class="brand" aria-label="GradeCalculator home">
         <span class="brand__mark" aria-hidden="true">A%</span>
-        <span class="brand__text"><span class="brand__name">GradeCalculator</span><span class="brand__tagline">Marks to an A</span></span>
+        <span class="brand__text"><span class="brand__name">GradeCalculator</span><span class="brand__tagline">Know your number</span></span>
       </a>
       <nav class="nav-desktop" aria-label="Primary">
         <a href="/Grade-Calculator/">Calculator</a>
@@ -108,71 +79,119 @@
       <div class="page-header__inner">
         <div class="eyebrow eyebrow--on-dark">Frequently asked questions</div>
         <h1 id="page-title">FAQ</h1>
-        <p>Short, accurate answers about the maths, the edge cases, and your privacy.</p>
+        <p>Short, accurate answers — organized the way students actually ask.</p>
       </div>
     </section>
 
     <div class="content" style="max-width: 760px;">
-      <div class="faq-list">
+      <!-- Using the calculator -->
+      <h2 style="font-size:15px; font-weight:600; letter-spacing:-0.01em; margin:28px 0 12px; display:flex; align-items:center; gap:8px;"><span style="width:28px; height:28px; border-radius:6px; background:var(--color-canvas-dark); color:white; display:grid; place-items:center; font-size:12px;">1</span> Using the calculator</h2>
+      <div class="faq-list" style="margin-top:0;">
+        <details class="faq-item" open>
+          <summary>What numbers do I enter? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-item__answer">
+            <p><strong>Marks you’ve earned</strong> — your total so far (e.g. 72). <strong>Current marks possible</strong> — what that was out of (e.g. 80). <strong>Final exam total</strong> — what the final is worth (e.g. 100). <strong>Target</strong> — overall % you want (e.g. 90).</p>
+            <p>Same units throughout. If your course is out of 500, enter 360 and 400, etc. The calculator handles decimals like 72.5 / 80.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What does “current marks possible” mean? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-item__answer"><p>It’s the denominator. If you scored 72 on assignments, quizzes, and midterms that were <em>worth 80 together</em>, you enter “72 earned / 80 possible”. It’s not a percentage field — it’s the point total your school uses.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I use decimals? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-item__answer"><p>Yes. 72.5 / 80 with a 100 final and 90% target → 89.5 exact → <strong>90 minimum</strong>. The required score is still rounded up to the nearest whole mark, even if your current marks include halves.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>What happens if my final has a different maximum? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-item__answer"><p>Enter whatever it is — 50, 75, 120. 72/80 + 50 final + 90% target → you need 45 / 50. The maths adapts automatically.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I explore “what if I score 80 on the final?” <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-item__answer"><p>Yes — after calculating, use the <strong>“What if I score…” slider</strong>. Drag to any final score and see your overall grade update instantly: 70 → 84.4%, 80 → 87.8%, 100 → 95.6% (example for 72/80 + 100).</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I share my calculation? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-item__answer"><p>After calculating, use <strong>Copy result</strong> for a concise message (great for WhatsApp/Discord) or <strong>Copy link</strong> for a shareable URL like <code>?earned=72&amp;possible=80&amp;final=100&amp;target=90</code>. The link restores the calculation client-side, but its values are visible to anyone with the link and may appear in normal server or analytics requests when opened. See <a href="/Grade-Calculator/privacy/">Privacy</a>.</p></div>
+        </details>
+      </div>
 
+      <!-- The maths -->
+      <h2 style="font-size:15px; font-weight:600; margin:32px 0 12px; display:flex; align-items:center; gap:8px;"><span style="width:28px; height:28px; border-radius:6px; background:var(--color-accent-periwinkle); color:var(--color-ink); display:grid; place-items:center; font-size:12px; font-weight:700;">2</span> The maths</h2>
+      <div class="faq-list" style="margin-top:0;">
         <details class="faq-item" open>
           <summary>How is the required final-exam score calculated? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
           <div class="faq-item__answer">
             <p>Overall % = (marks you’ve earned + marks on final) ÷ (possible so far + final total) × 100.</p>
             <p>We solve for <em>marks on final</em>:</p>
             <p><code>required = ceil(target ÷ 100 × (possible + finalTotal) − earned)</code></p>
-            <p>The <code>ceil</code> is the “round up” — you need the smallest whole mark that actually reaches the target.</p>
+            <p>The <code>ceil</code> is “round up” — you need the smallest whole mark that reaches the target.</p>
+            <p style="margin-top:8px; font-size:12px; color:var(--color-body); border-left:2px solid var(--color-hairline); padding-left:10px;">Example: 72/80 + 100 final, target 90% → 0.90 × 180 − 72 = 90 → you need <strong>90 / 100</strong>. Check: 72+90 = 162 / 180 = 90% ✓</p>
           </div>
         </details>
-
         <details class="faq-item">
           <summary>What does “minimum marks required” mean? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="faq-item__answer"><p>It’s the lowest integer score on the final that still gets you to your target overall. If the exact maths says 89.2, 89 isn’t enough — you need 90.</p></div>
+          <div class="faq-item__answer"><p>It’s the lowest integer that still hits your target. If the exact maths says 89.2, 89 isn’t enough — you need 90. We show <strong>Exact: 89.2 → Minimum: 90</strong> so you can verify. If exact is already 90, no rounding is shown.</p></div>
         </details>
-
-        <details class="faq-item">
-          <summary>What happens if I already have enough marks for an A? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="faq-item__answer"><p>You’ll see <strong>0 / final total</strong> and a message like “You already have enough marks for an A.” We also show what your overall would be even with 0, so you can see your buffer.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>What if an A is mathematically impossible? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="faq-item__answer"><p>We tell you clearly and show your <strong>maximum overall percentage</strong> even with a perfect final. For example: “Even with 100/100, your maximum would be 86.1%.” Use that to set a realistic target or talk to your instructor.</p></div>
-        </details>
-
         <details class="faq-item">
           <summary>Why does the calculator round up? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="faq-item__answer"><p>Most exams award whole marks. If you need 89.2, 89 won’t get you there. Rounding up guarantees the result you see is actually sufficient. When the exact requirement is already an integer, no rounding is needed.</p></div>
+          <div class="faq-item__answer"><p>Most exams award whole marks. 89.2 → 90 guarantees the result is sufficient. We use a tiny epsilon (1e-9) so floating-point noise like 90.0000000001 doesn’t become 91.</p></div>
         </details>
-
         <details class="faq-item">
-          <summary>Does the calculator assume the current and final marks are weighted equally? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <summary>Can I use this for grades other than A? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-item__answer"><p>Yes. Change target to 60, 70, 80 — any value. Presets 70/75/80/85/90/95 are one click.</p></div>
+        </details>
+      </div>
+
+      <!-- Edge cases -->
+      <h2 style="font-size:15px; font-weight:600; margin:32px 0 12px; display:flex; align-items:center; gap:8px;"><span style="width:28px; height:28px; border-radius:6px; background:var(--color-accent-mint); color:var(--color-ink); display:grid; place-items:center; font-size:12px;">3</span> Edge cases</h2>
+      <div class="faq-list" style="margin-top:0;">
+        <details class="faq-item">
+          <summary>What happens if I already have enough marks? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-item__answer"><p>You’ll see <strong>0 / final total</strong> and “You already have enough for 90%”. We also show your overall with 0 (e.g. 52.8%) and your buffer to a perfect final, so you can see how safe you are.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>What if an A is mathematically impossible? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-item__answer"><p>We say so clearly, show your <strong>maximum possible overall</strong> with a perfect final (e.g. 86.1%), the <strong>gap</strong> in percentage points, and a table of achievable lower targets — each clickable to recalculate instantly.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>What if I score 100% on the final? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-item__answer"><p>Maximum overall = (earned + finalTotal) ÷ (possible + finalTotal) × 100. We show this for every result so you know your ceiling. Use the what-if slider to see 60/70/80/90/100 scenarios.</p></div>
+        </details>
+      </div>
+
+      <!-- Weighting -->
+      <h2 style="font-size:15px; font-weight:600; margin:32px 0 12px; display:flex; align-items:center; gap:8px;"><span style="width:28px; height:28px; border-radius:6px; background:#fde68a; color:#92400e; display:grid; place-items:center; font-size:12px;">4</span> Weighting limits</h2>
+      <div class="faq-list" style="margin-top:0;">
+        <details class="faq-item" open>
+          <summary>Does this work with a 40%-weighted final? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
           <div class="faq-item__answer">
-            <p>By <em>total points</em>, yes. The final’s weight is its point total relative to the current total. That matches many courses where “80 marks so far + 100 on the final = 180 total.”</p>
-            <p>If your syllabus instead says “the final is 40% of the grade regardless of points,” use a weighted grade calculator or adjust the inputs to reflect the weighting.</p>
+            <p><strong>By total points, yes — by category weight, no.</strong> This calculator assumes (possible + finalTotal) is the course total, so weighting is proportional to points.</p>
+            <p>If your syllabus says “final = 40% of grade regardless of points” (e.g. homework 30% + midterm 30% + final 40%), the model differs. You need a weighted calculator — <em>coming soon</em> — or adjust inputs to reflect weighting.</p>
+            <p style="margin-top:8px; font-size:12px; background:var(--color-warning-bg); border:1px solid #fde68a; padding:8px 10px; border-radius:6px;"><strong>Quick check:</strong> Does possible + final equal your course total points on the syllabus? If yes, this tool is exact. If not, it’s an approximation.</p>
           </div>
         </details>
-
         <details class="faq-item">
-          <summary>Can I use this calculator for grades other than A? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="faq-item__answer"><p>Yes. Change the target to 60%, 70%, 50% — whatever your course requires. The maths is identical. Presets for 70/80/85/90/95 are built in for quick switching.</p></div>
+          <summary>What if assignments have different weights? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-item__answer"><p>If your school weights categories (e.g. homework 20%, quizzes 20%, midterm 20%, final 40%), combine your current category grades into a weighted current average first, then use a weighted tool. This calculator will over- or under-estimate otherwise. We flag this next to the form — transparent maths builds trust.</p></div>
         </details>
+      </div>
 
-        <details class="faq-item">
-          <summary>What happens if my final exam has a different maximum score? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="faq-item__answer"><p>Enter that number as the final total — 50, 75, 120, whatever. The calculator adapts automatically.</p></div>
-        </details>
-
+      <!-- Privacy -->
+      <h2 style="font-size:15px; font-weight:600; margin:32px 0 12px; display:flex; align-items:center; gap:8px;"><span style="width:28px; height:28px; border-radius:6px; background:var(--color-canvas-dark); color:white; display:grid; place-items:center; font-size:12px;">5</span> Privacy</h2>
+      <div class="faq-list" style="margin-top:0;">
         <details class="faq-item">
           <summary>Are my marks stored? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="faq-item__answer"><p>No. All calculations run in your browser. Marks are never sent to a server, never stored in cookies, and never logged. See the <a href="/Grade-Calculator/privacy/">Privacy Policy</a> for the plain-English version.</p></div>
+          <div class="faq-item__answer"><p>The arithmetic runs in your browser and GradeCalculator does not keep a calculation history. However, the site may collect visitor usage data through Google Analytics. A shared link also contains its values in the URL, which can be seen by anyone you share it with and may be included in normal server or analytics requests. Closing the tab clears the form, but does not erase a link you already shared. See <a href="/Grade-Calculator/privacy/">Privacy Policy</a>.</p></div>
         </details>
-
+        <details class="faq-item">
+          <summary>Does the site track me? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="faq-item__answer"><p>No account is required. We may use Google Analytics to understand aggregate visitor usage, such as page views, interactions, device/browser details, and approximate location. Analytics may use cookies or similar identifiers. Fonts are loaded from Google Fonts as a normal third-party web request. See the <a href="/Grade-Calculator/privacy/">Privacy Policy</a> for details.</p></div>
+        </details>
         <details class="faq-item">
           <summary>Is the calculator free to use? <span class="faq-item__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="faq-item__answer"><p>Yes — completely free, no account, no paywall. It’s a single-page calculator, not a subscription product.</p></div>
+          <div class="faq-item__answer"><p>Yes — completely free, no account, no paywall.</p></div>
         </details>
-
       </div>
 
       <div style="margin-top:28px; text-align:center;">
@@ -186,8 +205,8 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="/Grade-Calculator/" class="brand"><span class="brand__mark" aria-hidden="true">A%</span><span class="brand__text"><span class="brand__name" style="color:var(--color-ink)">GradeCalculator</span><span class="brand__tagline" style="color:var(--color-body)">Marks to an A</span></span></a>
-        <p>A tiny, private calculator for students.</p>
+        <a href="/Grade-Calculator/" class="brand"><span class="brand__mark" aria-hidden="true">A%</span><span class="brand__text"><span class="brand__name" style="color:var(--color-ink)">GradeCalculator</span><span class="brand__tagline" style="color:var(--color-body)">Know your number</span></span></a>
+        <p>A tiny, focused calculator for students.</p>
       </div>
       <div class="footer-col"><h4>Product</h4><ul><li><a href="/Grade-Calculator/">Calculator</a></li><li><a href="/Grade-Calculator/faq/">FAQ</a></li><li><a href="/Grade-Calculator/about/">About</a></li><li><a href="/Grade-Calculator/contact/">Contact</a></li></ul></div>
       <div class="footer-col"><h4>Legal</h4><ul><li><a href="/Grade-Calculator/privacy/">Privacy</a></li><li><a href="/Grade-Calculator/terms/">Terms</a></li><li><a href="mailto:yashkharb37@gmail.com">yashkharb37@gmail.com</a></li></ul></div>

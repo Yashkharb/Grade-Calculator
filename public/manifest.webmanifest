@@ -1,7 +1,7 @@
 {
   "name": "GradeCalculator — How Many Marks Do I Need to Get an A?",
   "short_name": "GradeCalculator",
-  "description": "Calculate exactly how many marks you need on your final exam to get an A. Fast, private, no sign-up.",
+  "description": "Calculate exactly how many marks you need on your final exam to get an A. Fast, clear, no sign-up.",
   "start_url": "/Grade-Calculator/",
   "display": "standalone",
   "background_color": "#ffffff",
