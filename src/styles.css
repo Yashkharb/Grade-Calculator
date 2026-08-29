@@ -296,6 +296,13 @@ button { cursor: pointer; }
 }
 .btn--full { width: 100%; }
 
+/* Keep the desktop header CTA out of the compact navigation layout. The
+   base .btn rule comes later than .header-cta, so use equal specificity here. */
+.btn.header-cta { display: none; }
+@media (min-width: 880px) {
+  .btn.header-cta { display: inline-flex; }
+}
+
 /* Mobile toggle */
 .nav-toggle {
   display: grid;
@@ -1154,7 +1161,9 @@ button { cursor: pointer; }
   padding: 32px var(--space-lg) 48px;
   display: grid;
   gap: var(--space-3xl);
+  min-width: 0;
 }
+.content > * { min-width: 0; }
 @media (min-width: 768px) { .content { padding: 40px var(--space-3xl) 56px; } }
 @media (min-width: 960px) {
   .content--with-toc {
@@ -1167,6 +1176,7 @@ button { cursor: pointer; }
   font-size: 15px;
   line-height: 1.7;
   color: #1e1e24;
+  min-width: 0;
 }
 .prose > * + * { margin-top: 16px; }
 .prose h2 {
@@ -1204,6 +1214,8 @@ button { cursor: pointer; }
   border: 1px solid var(--color-hairline);
   padding: 1px 6px;
   border-radius: var(--radius-xs);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .prose hr {
   border: none;
@@ -1340,6 +1352,10 @@ button { cursor: pointer; }
 }
 .faq-item__answer p { margin: 0; }
 .faq-item__answer p + p { margin-top: 10px; }
+.faq-item__answer code {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
 
 /* Contact */
 .contact-grid {
@@ -2116,6 +2132,53 @@ button { cursor: pointer; }
 .gap-vis__label { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.07em; text-transform: uppercase; opacity: 0.7; }
 .gap-vis__value { font-size: 14px; font-weight: 700; letter-spacing: -0.02em; margin-top: 2px; }
 .gap-vis__arrow { font-size: 14px; color: var(--color-body); }
+
+/* Prevent intrinsic content widths from turning the one-column mobile grid
+   into a horizontal scroller. */
+.calc-layout > *,
+.calc-card,
+.result-panel,
+.result-card,
+.field-group,
+.field,
+.field-group__head,
+.target-row,
+.whatif,
+.explorer,
+.share-bar {
+  min-width: 0;
+}
+.calc-form { grid-template-columns: minmax(0, 1fr); }
+.calc-form > * { min-width: 0; }
+fieldset.field-group { min-inline-size: 0; width: 100%; }
+.unified-row { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); min-width: 0; }
+.field-group__head { flex-wrap: wrap; }
+.field-group__hint { min-width: 0; text-align: right; }
+.exact-clarity { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.gap-vis { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr); }
+.share-bar__url { min-width: 0; max-width: 100%; }
+.share-bar__hint { min-width: 0; overflow-wrap: anywhere; }
+.explorer__table { table-layout: fixed; }
+.explorer__table th,
+.explorer__table td { overflow-wrap: anywhere; }
+
+@media (max-width: 767px) {
+  /* Avoid reserving a desktop scrollbar gutter on narrow touch viewports. */
+  html { scrollbar-gutter: auto; }
+  .result-card { gap: 12px; }
+  .result-actions { gap: 8px; }
+}
+
+@media (max-width: 479px) {
+  /* Give the primary action and reset action their own full-width rows on
+     small phones instead of allowing the long label to force a flex item out. */
+  .calc-actions { flex-wrap: wrap; }
+  .calc-actions .btn {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+  }
+}
 
 /* Result improved spacing */
 .result-main__score { flex-direction: column; gap: 2px; }
